@@ -320,7 +320,7 @@ export class ReactNative extends HandlerInterface
 			ortc.reduceCodecs(sendingRemoteRtpParameters.codecs);
 
 		if (!this._transportReady)
-			await this._setupTransport({ localDtlsRole: 'server', localSdpObject });
+			await this._setupTransport({ localDtlsRole: 'client', localSdpObject });
 
 		if (track.kind === 'video' && encodings && encodings.length > 1)
 		{
