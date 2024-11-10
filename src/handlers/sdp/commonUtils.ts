@@ -7,6 +7,7 @@ import {
 	RtpHeaderExtensionParameters,
 	RtpParameters,
 	RtcpFeedback,
+	RtpHeaderExtensionUri,
 } from '../../RtpParameters';
 
 /**
@@ -295,7 +296,7 @@ export function applyCodecParameters({
  */
 export function addRtpExtensionToMediaObject(
 	{ mediaObject, uri }:
-	{ mediaObject: any; uri: string }
+	{ mediaObject: any; uri: RtpHeaderExtensionUri }
 ): RtpHeaderExtensionParameters | undefined
 {
 	if (!Array.isArray(mediaObject.ext))
